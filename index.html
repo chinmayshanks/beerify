@@ -1,0 +1,59 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Beerfinder</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <meta name="author" content="Chinmay Shaligram">
+    <meta name="description" content="A tiny little corner of the internet that makes sure you never go thirsty.">
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Bangers|Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src="assets/js/vendor/modernizr.js"></script>
+</head>
+<body>
+    <h1 class="bigDaddy text-center"><a class="noclass" href="index.html">BEERIFY!</a></h1>
+        <div class="row">
+            <div class="small-12 small-centered-columns">
+                <p class="text-center">
+                    <button id="bigButton">
+                        <h4>SHOW ME THE BEER!</h4>
+                    </button>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-4 columns contentParent">
+                <div id="content">
+                </div>
+            </div>
+            <div class="large-8 columns">
+                <div id="map">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/foundation.min.js"></script>
+    <script src="assets/leaflet/leaflet.js"></script>
+    <script type='text/javascript' src='assets/js/geoPosition.js'></script>
+    <script type='text/javascript' src='assets/js/geoPositionSimulator.js'></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+    <script type='text/javascript' src='assets/js/func.js'></script>
+    <script>
+        $(document).foundation();
+        $(document).ready(function(){
+            $("#bigButton").click(function(){
+                $("#content").append("<h3>HERE'S THE BEER!</h3>")
+                reticulateSplines();
+                $(this).hide();
+                $("#popup").show();
+            });
+        });
+    </script>
+
+</body>
+</html>
